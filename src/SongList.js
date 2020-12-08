@@ -7,11 +7,13 @@ const SongList = (props)=>{
             <Card key={song.id}>
                 <Card.Content>
                     <Card.Header>{song.title}</Card.Header>
-                    <Card.Description>{song.artist}</Card.Description>
-                    <Card.Description> {song.album}</Card.Description>
+                    <Card.Description>{song.artist}</Card.Description>    
                 </Card.Content>
                 <Card.Content>
-                    <Button>Delete</Button>
+                <Card.Header>{song.album}</Card.Header>
+                </Card.Content>
+                <Card.Content>
+                    <Button onClick={() => props.deleteSong(song.id)}>Delete</Button>
                     <Button>Edit</Button>
                 </Card.Content>
             </Card>
