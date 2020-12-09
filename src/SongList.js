@@ -14,7 +14,7 @@ const SongList = (props)=>{
                 </Card.Content>
                 <Card.Content>
                     <Button onClick={() => props.deleteSong(song.id)}>Delete</Button>
-                    <Button>Edit</Button>
+                    <Button onClick={() => props.openAndEdit(song)}>Edit</Button> 
                 </Card.Content>
             </Card>
         )
@@ -25,5 +25,4 @@ const SongList = (props)=>{
         </Card.Group>
     )
 }
-
 export default SongList;
